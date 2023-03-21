@@ -162,15 +162,17 @@ footer{
 footer nav a{
     display: block;
     padding-left: 0;
+    
 }
 .news label{
     display: block;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 900;
 }
 .news input{
     border: 2px solid var(--color-black);
     box-shadow: 4px 4px 0 var(--color-black);
+    font-size: 1.5rem;
     padding: .5rem;
     width: 100%;
 }
