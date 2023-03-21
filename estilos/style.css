@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family:'Roboto',sans-serif;
+    font-family:"Roboto",sans-serif;
 }
 :root{
     --color-prymary:#ed4d1b;
@@ -14,12 +14,10 @@
 
 }
 body{
-    background: linear-gradient(90deg,#ffe7d1 0%,#fff2e6,100%);
+    background-image: linear-gradient(90deg,#ffe7d1 0%,#fff2e6,100%);
     padding: 0 1rem;
 }
-.text-colorprymire{
-    color: var(--color-prymary);
-}
+
 
 header,
 .hero-section,
@@ -28,7 +26,7 @@ footer{
     border-color: var(--color-black);
     border-style: solid;
     border-width: 0 1px 1px 1px;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 header img{
@@ -36,17 +34,27 @@ header img{
     margin: 1rem auto;
 }
 header nav{
-    display: grid;
+    display:  grid;
     grid-template-columns: 1fr 1fr;
+    
 }
-nav > a {
+nav a {
     color: black;   
     text-decoration: none; 
     font-size: 1.25rem;
+    font-weight: 900;
     padding: .5rem;
+    border: 1px solid black;
+    margin: 2px;
+    border-radius: 4px;
+    background-image: linear-gradient(to left,var(--color-prymary),transparent);
+}
+nav a:hover {
+    background-color: #ed4d1b;
 }
 header nav a:nth-child(2n-1){
     text-align: center;
+    background-image: linear-gradient(to right,var(--color-prymary),transparent);
 }
 .botao{
     background-color: var(--color-prymary);
@@ -66,7 +74,7 @@ header nav a:nth-child(2n-1){
 }
 .hero-section{
     padding-right: 0;
-    padding-bottom: 15rem;
+    padding-bottom: 16rem;
 }
 .hero-section img {
     display: block;
@@ -76,11 +84,10 @@ header nav a:nth-child(2n-1){
 h1{
 font-size:3rem;
 line-height: 105%;
-margin-top: 1.25rem;
-
 }
 h2{
     font-size: 1.25rem;
+    text-align: center;
 }
 .hero-section p{
     font-size: 1.25rem;
@@ -99,13 +106,14 @@ h2{
     width: 132px;
 }
 .decoration{
+    display: block;
     position: relative;
 }
 .decoration::after{
     content: '';
     background:url(../Imagens/three-dashes.svg);
     position: absolute;
-    top: -.75rem;
+    top: -0.75rem;
     height: 36px;
     width: 40px;
 }
@@ -119,23 +127,70 @@ h2{
     align-items: start;
     gap: 1.25rem;
     margin-top: -8rem;
+    margin-bottom: 4rem;
 
 }
-.cards{
+.card{
     background-color: var(--color-prymary);
     border: solid var(--color-black);
     box-shadow: 4px 4px 0 var(--color-black);
-    max-width: 20rem;
+    max-width: 17rem;
     padding: 2rem 0 0 2rem; 
 
 }
-.cards:nth-child(2n){
+.card:nth-child(2n){
     align-self: end;
     background-color: var(--color-secondary);
     align-content: end;
 }
-.ma-1rem{
+.card strong{
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.card a{
+    display: block;
+    margin: 3rem 0 0 auto;
+    width: fit-content;
+}
+/*Rodapé*/
+footer{
+    border-bottom: 0;
+    padding: 1rem 1.25rem 4rem;
+
+}
+footer nav a{
+    display: block;
+    padding-left: 0;
+}
+.news label{
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+.news input{
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    padding: .5rem;
+    width: 100%;
+}
+/*Utilitários*/
+.mt-1{
     margin-top: 1rem;
+}
+.mt-2{
+    margin-top: 2rem;
+}
+.mb-1{
     margin-bottom: 1rem;
 }
-
+.mb-2{
+    margin-bottom: 1rem;
+}
+.mx{
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-colorprymire{
+    color: var(--color-prymary);
+}
